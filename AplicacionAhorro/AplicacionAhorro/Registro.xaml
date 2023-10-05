@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AplicacionAhorro.Registro">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Id"></Label>
+                <Entry x:Name="txtId"></Entry>
+                <Label Text="Usuario"></Label>
+                <Entry x:Name="txtUsuario"></Entry>
+                <Label Text="Contraseña"></Label>
+                <Entry x:Name="txtContraseña" IsPassword="True"></Entry>
+                <Label Text="Confirmar contraseña"></Label>
+                <Entry x:Name="txtConfirmar" IsPassword="True"></Entry>
+                <Label Text="Nombre completo"></Label>
+                <Entry x:Name="txtNombre"></Entry>
+                <Label Text="Sexo"></Label>
+                <Picker x:Name="pSexo"></Picker>
+                <Label Text="Ahorro inicial"></Label>
+                <Entry x:Name="txtUltimoAhorrado"></Entry>
+                <Label Text="Correo"></Label>
+                <Entry x:Name="txtCorreo"></Entry>
+                <Button x:Name="btnRegistrar" Text="Registrar"></Button>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AplicacionAhorro.Lista">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <SearchBar x:Name="txtBuscar" FontSize="Large"></SearchBar>
+                <Button Text="Nuevo" x:Name="btnNuevo"></Button>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Nombre - " TextColor="Black"></Label>
+                <Label Text="Ultimo ahorrado" TextColor="DarkBlue"></Label>
+                <Label Text="-" TextColor="Black"></Label>
+                <Label Text="Total ahorrado" TextColor="DarkRed"></Label>
+            </StackLayout>
+            <ActivityIndicator x:Name="indicador" IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" Color="Blue"></ActivityIndicator>
+            <ListView x:Name="lista" RowHeight="-1" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label TextColor="Black" Text="{Binding NombreCompleto}"></Label>
+                                </StackLayout>
+                                <Label TextColor="DarkBlue" Text="{Binding UltimoAhorrado}"></Label>
+                                <Label TextColor="DarkRed" Text="{Binding TotalAhorrado}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

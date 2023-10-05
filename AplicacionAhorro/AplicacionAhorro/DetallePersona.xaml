@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AplicacionAhorro.DetallePersona">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Vertical">
+                <Label x:Name="lblId"></Label>
+                <Label x:Name="lblNombreCompleto"></Label>
+                <Label x:Name="lblSexo"></Label>
+                <Label x:Name="lblCorreo"></Label>
+                <Label x:Name="lblTotalAhorrado"></Label>
+                <Button x:Name="btnAhorrar" Text="Ahorrar"></Button>
+            </StackLayout>
+            <ListView x:Name="lista" RowHeight="-1" HasUnevenRows="True" SeparatorVisibility="Default" SeparatorColor="Blue">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label TextColor="DarkBlue" Text="{Binding UltimoAhorrado}"></Label>
+                                    <Label Text="{Binding UltimoAhorro}"></Label>
+                                </StackLayout>
+                                <Label TextColor="DarkRed" Text="{Binding TotalAhorrado}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
